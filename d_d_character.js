@@ -22,10 +22,10 @@ class Character {
 
     }
     perks(){
-        const skill = this.rollDice()
-        .sort().slice(1)
-        .reduce((a,b) => a + b ); 
-        return skill;
+        return this.rollDice()
+                .sort()
+                .slice(1)
+                .reduce((a,b) => a + b ); 
     }
     rollDice(){
             const turns = [1,2,3,4];
