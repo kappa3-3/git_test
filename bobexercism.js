@@ -1,6 +1,9 @@
-class Bob {
-    response(argument) {
-        switch (argument) {
+class Person {
+    constructor(order) {
+        this.order = order;
+    }
+    response(order) {
+        switch (order) {
         case 'question': console.log('Sure');
         break;
         case 'yell': console.log('Whoa, chill out!');
@@ -10,18 +13,12 @@ class Bob {
         case '': console.log('Fine. Be that way!');
         break;
         default: console.log('Whatever.');
-        } 
-        }
+        };
+     }
     };
 
-/*Bob is a lackadaisical teenager. In conversation, his responses are very limited.
-
-Bob answers 'Sure.' if you ask him a question.
-
-He answers 'Whoa, chill out!' if you yell at him.
-
-He retorts 'Calm down, I know what I'm doing!' if you yell a question at him.
-
-He says 'Fine. Be that way!' if you address him without actually saying anything.
-
-He answers 'Whatever.' to anything else.*\
+    const Bob = new Person;
+    Bob.response('question');
+    Bob.response('yell');
+    Bob.response('yellQuestion');
+    Bob.response('hvbekjh');
