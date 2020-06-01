@@ -7,24 +7,31 @@
 function migratoryBirds(arr) {
     const sortedArray = arr.sort();
     let duplicatedItems = [];
-    let counter = [];
+    let counter = [0, 0, 0, 0, 0];
     for (let i = 0; i < sortedArray.length; i++){
+        
         switch(sortedArray[i]){
             case 1: counter[0] += 1;
                 break;
-            case 2:
+            case 2: counter[1] +=1;
                 break;
-            case 3:
+            case 3: counter[2] +=1;
                 break;
-            case 4:
+            case 4: counter[3] +=1;
                 break;
-            case 5:
+            case 5: counter[4] +=1;
                 break;
-            default:
-
-        }
-        
+            default: false;
+        }      
     }
+
+    const max = Math.max(...counter);
+    
+    console.log(max);
+
+
+
+    console.log(counter);
     // for( let i = 0; i < sortedArray.length - 1; i++){
         
     //     if (sortedArray[i] === sortedArray[i+1]) {
