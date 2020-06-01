@@ -6,16 +6,23 @@
 
 function migratoryBirds(arr) {
     const sortedArray = arr.sort();
-
+    let duplicatedItems = [];
     for( let i = 0; i < sortedArray.length - 1; i++){
-        let duplicatedItems = [];
+        
         if (sortedArray[i] === sortedArray[i+1]) {
             duplicatedItems.push(sortedArray[i]);
         }
-        return duplicatedItems;
+      
     }
     console.log(duplicatedItems)
-}
+    for ( let j = 0; j < duplicatedItems.length; j++){
+        if (duplicatedItems.indexOf(duplicatedItems[j])!== j ){
+            console.log(duplicatedItems[j])
+        }
 
-const arr = [3,2,2,1,5,3,4]; // length = 7 // index = [0, 1, 2, 3, 4, 5, 6]
+    }
+}
+  
+
+const arr = [3,3,2,2,1,5,3,4]; // length = 7 // index = [0, 1, 2, 3, 4, 5, 6]
 migratoryBirds(arr);
