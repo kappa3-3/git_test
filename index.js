@@ -7,22 +7,49 @@
 function migratoryBirds(arr) {
     const sortedArray = arr.sort();
     let duplicatedItems = [];
-    for( let i = 0; i < sortedArray.length - 1; i++){
-        
-        if (sortedArray[i] === sortedArray[i+1]) {
-            duplicatedItems.push(sortedArray[i]);
-        }
-      
-    }
-    console.log(duplicatedItems)
-    for ( let j = 0; j < duplicatedItems.length; j++){
-        if (duplicatedItems.indexOf(duplicatedItems[j])!== j ){
-            console.log(duplicatedItems[j])
-        }
+    let counter = [];
+    for (let i = 0; i < sortedArray.length; i++){
+        switch(sortedArray[i]){
+            case 1: counter[0] += 1;
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            default:
 
+        }
+        
     }
+    // for( let i = 0; i < sortedArray.length - 1; i++){
+        
+    //     if (sortedArray[i] === sortedArray[i+1]) {
+    //         duplicatedItems.push(sortedArray[i]);
+    //     }
+      
+    // }
+    // console.log(duplicatedItems)
+    // for ( let j = 0; j < duplicatedItems.length; j++){
+    //     if (duplicatedItems.indexOf(duplicatedItems[j])!== j ){
+    //         var items = duplicatedItems[j];
+    //         console.log(items);
+    //     }
+        
+    //     }
+    //     if (items.length > 1){
+    //         console.log(min(items));
+    // }
 }
   
-
-const arr = [3,3,2,2,1,5,3,4]; // length = 7 // index = [0, 1, 2, 3, 4, 5, 6]
-migratoryBirds(arr);
+const arr1 = [5,3,2,2,4,4,1];
+const arr0 = [3,3,2,2,1,5,3,4]; // length = 7 // index = [0, 1, 2, 3, 4, 5, 6]
+const arr2 = [1,2,1,4,5,2,1,4];
+const arr3 = [4,4,4,4,3,3,3,3,2,2,2,1,1,1,1,4];
+// migratoryBirds(arr);
+// migratoryBirds(arr1);
+// migratoryBirds(arr2);
+migratoryBirds(arr3);
