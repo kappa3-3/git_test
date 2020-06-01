@@ -4,7 +4,7 @@
 //migratoryBirds has the following parameter(s):
 //arr: an array of integers representing types of birds sighted
 
-function migratoryBirds(arr) {
+function migratoryBirds(arr, randomArray) {
     const sortedArray = arr.sort();
     let duplicatedItems = [];
     let counter = [0, 0, 0, 0, 0];
@@ -25,38 +25,30 @@ function migratoryBirds(arr) {
         }      
     }
 
+    function randomArrayCreator(randomLength) {
+        let randomArray = [];
+        for(let i =0; i <= randomLength; i++) {
+            Math.floor(Math.random * 5) + 1;
+        }
+        
+
+        const randomArray = Math.floor(Math.random * 5) + 1;
+    }
+
     const max = Math.max(...counter);
+    const index = counter.indexOf(max);
+    const number = index + 1;
+
     
-    console.log(max);
+    console.log(number);
 
-
-
-    console.log(counter);
-    // for( let i = 0; i < sortedArray.length - 1; i++){
-        
-    //     if (sortedArray[i] === sortedArray[i+1]) {
-    //         duplicatedItems.push(sortedArray[i]);
-    //     }
-      
-    // }
-    // console.log(duplicatedItems)
-    // for ( let j = 0; j < duplicatedItems.length; j++){
-    //     if (duplicatedItems.indexOf(duplicatedItems[j])!== j ){
-    //         var items = duplicatedItems[j];
-    //         console.log(items);
-    //     }
-        
-    //     }
-    //     if (items.length > 1){
-    //         console.log(min(items));
-    // }
 }
   
 const arr1 = [5,3,2,2,4,4,1];
 const arr0 = [3,3,2,2,1,5,3,4]; // length = 7 // index = [0, 1, 2, 3, 4, 5, 6]
 const arr2 = [1,2,1,4,5,2,1,4];
 const arr3 = [4,4,4,4,3,3,3,3,2,2,2,1,1,1,1,4];
-// migratoryBirds(arr);
-// migratoryBirds(arr1);
-// migratoryBirds(arr2);
+migratoryBirds(arr0);
+migratoryBirds(arr1);
+migratoryBirds(arr2);
 migratoryBirds(arr3);
