@@ -4,9 +4,9 @@
 //migratoryBirds has the following parameter(s):
 //arr: an array of integers representing types of birds sighted
 
-var randomLengthParameter =  Math.floor(Math.random() * 10) + 1;
-function randomArrayCreator(randomLength) {
-    
+
+function randomArrayCreator() {
+    var randomLength =  Math.floor(Math.random() * 30) + 1;
     let randomArray = [];
     for(let i = 1; i <= randomLength; i++) {
 
@@ -16,8 +16,8 @@ function randomArrayCreator(randomLength) {
     }
     return randomArray;
 }
-function migratoryBirds(callback, randomLength) {
-    const sortedArray = callback(randomLength).sort();
+function migratoryBirds(callback) {
+    const sortedArray = callback().sort();
     let duplicatedItems = [];
     let counter = [0, 0, 0, 0, 0];
     for (let i = 0; i < sortedArray.length; i++){
@@ -41,4 +41,4 @@ function migratoryBirds(callback, randomLength) {
     const number = index + 1;
     console.log(number, sortedArray);
 }
-migratoryBirds(randomArrayCreator, randomLengthParameter);
+migratoryBirds(randomArrayCreator);
