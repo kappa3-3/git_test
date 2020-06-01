@@ -7,10 +7,15 @@
 function migratoryBirds(arr) {
     const sortedArray = arr.sort();
 
-    for( let i = 0; i < sortedArray.length; i++){
-        
+    for( let i = 0; i < sortedArray.length - 1; i++){
+        let duplicatedItems = [];
+        if (sortedArray[i] === sortedArray[i+1]) {
+            duplicatedItems.push(sortedArray[i]);
+        }
+        return duplicatedItems;
     }
-    console.log(sortedArray);   
+    console.log(duplicatedItems)
 }
-const arr = [3,2,2,1,5,3,4];
+
+const arr = [3,2,2,1,5,3,4]; // length = 7 // index = [0, 1, 2, 3, 4, 5, 6]
 migratoryBirds(arr);
